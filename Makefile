@@ -27,3 +27,4 @@ sparse_access.bin : sparse_access.c
 
 %.bin : %.c
 	clang -DN=2000 -O3 -o $@ $*.c
+	gdb -batch -ex 'file $@' -ex 'disassemble main' > $*_main.dump.txt

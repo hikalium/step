@@ -1,0 +1,68 @@
+Dump of assembler code for function main:
+   0x0000000000401110 <+0>:	movl   $0x0,0x2f26(%rip)        # 0x404040 <i>
+   0x000000000040111a <+10>:	mov    $0x2288850,%eax
+   0x000000000040111f <+15>:	xor    %ecx,%ecx
+   0x0000000000401121 <+17>:	nopw   %cs:0x0(%rax,%rax,1)
+   0x000000000040112b <+27>:	nopl   0x0(%rax,%rax,1)
+   0x0000000000401130 <+32>:	mov    $0x1346450,%edx
+   0x0000000000401135 <+37>:	xor    %esi,%esi
+   0x0000000000401137 <+39>:	nopw   0x0(%rax,%rax,1)
+   0x0000000000401140 <+48>:	imul   $0x1f40,%rcx,%rdi
+   0x0000000000401147 <+55>:	movd   0x404050(%rdi,%rsi,4),%xmm0
+   0x0000000000401150 <+64>:	pshufd $0x0,%xmm0,%xmm0
+   0x0000000000401155 <+69>:	mov    $0xc,%edi
+   0x000000000040115a <+74>:	nopw   0x0(%rax,%rax,1)
+   0x0000000000401160 <+80>:	movdqa -0x30(%rdx,%rdi,4),%xmm1
+   0x0000000000401166 <+86>:	movdqa -0x20(%rdx,%rdi,4),%xmm2
+   0x000000000040116c <+92>:	pshufd $0xf5,%xmm1,%xmm3
+   0x0000000000401171 <+97>:	pmuludq %xmm0,%xmm1
+   0x0000000000401175 <+101>:	pshufd $0xe8,%xmm1,%xmm4
+   0x000000000040117a <+106>:	pshufd $0xf5,%xmm0,%xmm1
+   0x000000000040117f <+111>:	pmuludq %xmm1,%xmm3
+   0x0000000000401183 <+115>:	pshufd $0xe8,%xmm3,%xmm3
+   0x0000000000401188 <+120>:	punpckldq %xmm3,%xmm4
+   0x000000000040118c <+124>:	pshufd $0xf5,%xmm2,%xmm3
+   0x0000000000401191 <+129>:	pmuludq %xmm0,%xmm2
+   0x0000000000401195 <+133>:	pshufd $0xe8,%xmm2,%xmm2
+   0x000000000040119a <+138>:	pmuludq %xmm1,%xmm3
+   0x000000000040119e <+142>:	pshufd $0xe8,%xmm3,%xmm3
+   0x00000000004011a3 <+147>:	punpckldq %xmm3,%xmm2
+   0x00000000004011a7 <+151>:	paddd  -0x30(%rax,%rdi,4),%xmm4
+   0x00000000004011ad <+157>:	paddd  -0x20(%rax,%rdi,4),%xmm2
+   0x00000000004011b3 <+163>:	movdqa %xmm4,-0x30(%rax,%rdi,4)
+   0x00000000004011b9 <+169>:	movdqa %xmm2,-0x20(%rax,%rdi,4)
+   0x00000000004011bf <+175>:	movdqa -0x10(%rdx,%rdi,4),%xmm2
+   0x00000000004011c5 <+181>:	movdqa (%rdx,%rdi,4),%xmm3
+   0x00000000004011ca <+186>:	pshufd $0xf5,%xmm2,%xmm4
+   0x00000000004011cf <+191>:	pmuludq %xmm0,%xmm2
+   0x00000000004011d3 <+195>:	pshufd $0xe8,%xmm2,%xmm2
+   0x00000000004011d8 <+200>:	pmuludq %xmm1,%xmm4
+   0x00000000004011dc <+204>:	pshufd $0xe8,%xmm4,%xmm4
+   0x00000000004011e1 <+209>:	punpckldq %xmm4,%xmm2
+   0x00000000004011e5 <+213>:	pshufd $0xf5,%xmm3,%xmm4
+   0x00000000004011ea <+218>:	pmuludq %xmm0,%xmm3
+   0x00000000004011ee <+222>:	pshufd $0xe8,%xmm3,%xmm3
+   0x00000000004011f3 <+227>:	pmuludq %xmm1,%xmm4
+   0x00000000004011f7 <+231>:	pshufd $0xe8,%xmm4,%xmm1
+   0x00000000004011fc <+236>:	punpckldq %xmm1,%xmm3
+   0x0000000000401200 <+240>:	paddd  -0x10(%rax,%rdi,4),%xmm2
+   0x0000000000401206 <+246>:	paddd  (%rax,%rdi,4),%xmm3
+   0x000000000040120b <+251>:	movdqa %xmm2,-0x10(%rax,%rdi,4)
+   0x0000000000401211 <+257>:	movdqa %xmm3,(%rax,%rdi,4)
+   0x0000000000401216 <+262>:	add    $0x10,%rdi
+   0x000000000040121a <+266>:	cmp    $0x7dc,%rdi
+   0x0000000000401221 <+273>:	jne    0x401160 <main+80>
+   0x0000000000401227 <+279>:	add    $0x1,%rsi
+   0x000000000040122b <+283>:	add    $0x1f40,%rdx
+   0x0000000000401232 <+290>:	cmp    $0x7d0,%rsi
+   0x0000000000401239 <+297>:	jne    0x401140 <main+48>
+   0x000000000040123f <+303>:	add    $0x1,%rcx
+   0x0000000000401243 <+307>:	add    $0x1f40,%rax
+   0x0000000000401249 <+313>:	cmp    $0x7d0,%rcx
+   0x0000000000401250 <+320>:	jne    0x401130 <main+32>
+   0x0000000000401256 <+326>:	movl   $0x7d0,0x2de4(%rip)        # 0x404044 <k>
+   0x0000000000401260 <+336>:	movl   $0x7d0,0x2dde(%rip)        # 0x404048 <j>
+   0x000000000040126a <+346>:	movl   $0x7d0,0x2dcc(%rip)        # 0x404040 <i>
+   0x0000000000401274 <+356>:	xor    %eax,%eax
+   0x0000000000401276 <+358>:	ret    
+End of assembler dump.
